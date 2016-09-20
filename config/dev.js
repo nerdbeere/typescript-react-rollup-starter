@@ -1,19 +1,18 @@
 // Rollup plugins.
-import babel from 'rollup-plugin-babel'
+// import babel from 'rollup-plugin-babel'
 import cjs from 'rollup-plugin-commonjs'
 import globals from 'rollup-plugin-node-globals'
 import replace from 'rollup-plugin-replace'
 import resolve from 'rollup-plugin-node-resolve'
+import rollupTypescript from 'rollup-plugin-typescript'
 
 export default {
   dest: 'build/app.js',
-  entry: 'src/index.js',
+  entry: 'src/index.tsx',
   format: 'iife',
   plugins: [
-    babel({
-      babelrc: false,
-      exclude: 'node_modules/**',
-      presets: [ 'es2015-rollup', 'stage-0', 'react' ]
+    rollupTypescript({
+      typescript: require('typescript')
     }),
     cjs({
       exclude: 'node_modules/process-es6/**',

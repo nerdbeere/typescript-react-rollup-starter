@@ -29,26 +29,21 @@
     "react-dom": "15.3.0"
   },
   "devDependencies": {
-    "babel-preset-es2015-rollup": "1.2.0",
-    "babel-preset-react": "6.11.1",
-    "babel-preset-stage-0": "6.5.0",
     "browser-sync": "2.14.0",
     "npm-run-all": "2.3.0",
     "onchange": "2.5.0",
     "rollup": "0.34.8",
-    "rollup-plugin-babel": "2.6.1",
     "rollup-plugin-commonjs": "3.3.1",
     "rollup-plugin-node-globals": "1.0.6",
     "rollup-plugin-node-resolve": "2.0.0",
     "rollup-plugin-replace": "1.1.1",
+    "rollup-plugin-typescript": "^0.8.1",
     "rollup-plugin-uglify": "1.0.1",
     "snazzy": "4.0.1",
     "standard": "7.1.2"
   },
   "scripts": {
-    "prebuild": "npm run std --silent",
     "build": "rollup -c config/prod.js",
-    "prebuild:dev": "npm run std --silent",
     "build:dev": "rollup -c config/dev.js",
     "browse": "browser-sync start --s --index 'html/index-dev.html' --files 'html/**/*.html, build/**/*.js' --no-notify",
     "start": "npm run build:dev && npm-run-all --parallel watch browse",

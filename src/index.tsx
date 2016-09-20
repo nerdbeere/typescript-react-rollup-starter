@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 // Import the components.
-import { DummyComponent } from './components/dummy-component.jsx'
+import { DummyComponent } from './components/dummy-component.tsx'
 
 // Define the root element.
 const root = document.querySelector('main')
